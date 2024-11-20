@@ -18,6 +18,9 @@ public class BookPage extends BasePage {
     @FindBy(id = "book_categories")
     public WebElement mainCategoryElement;
 
+    @FindBy(css = ".dataTables_info")
+    public WebElement bookCount;
+
     @FindBy(name = "name")
     public WebElement bookName;
 
@@ -41,6 +44,19 @@ public class BookPage extends BasePage {
         String xpath = "//td[3][.='" + book + "']/../td/a";
         return Driver.getDriver().findElement(By.xpath(xpath));
     }
+
+
+    @FindBy(xpath = "//div[@class='portlet-title']//a")
+    public WebElement addBook;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement saveChanges;
+
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement toastMessage;
+
+    @FindBy(id = "book_group_id")
+    public WebElement categoryDropdown;
 
 
 
