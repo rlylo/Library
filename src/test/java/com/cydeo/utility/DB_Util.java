@@ -26,14 +26,11 @@ public class DB_Util {
 
         try {
             con = DriverManager.getConnection(url, username, password) ;
-            System.out.println("CONNECTION SUCCESSFUL");
+            System.out.println("CONNECTION SUCCESSFUL WITH DB_Util");
         } catch (Exception e) {
-            System.out.println("CONNECTION HAS FAILED " + e.getMessage() );
+            System.out.println("CONNECTION HAS FAILED WITH DB_Util " + e.getMessage() );
         }
-
     }
-
-
     /**
      * Create connection method , just checking one connection successful or not
      */
@@ -44,7 +41,6 @@ public class DB_Util {
         String password = ConfigurationReader.getProperty("library2.db.password") ;
 
         createConnection(url, username, password);
-
     }
 
 
