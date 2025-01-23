@@ -27,6 +27,9 @@ public class UsersPage extends BasePage {
     @FindBy(css = ".dataTables_info")
     public WebElement userCount;
 
+    @FindBy(id = "tbl_books_info")
+    public WebElement booksCount;
+
     @FindBy(xpath = "//select[@name='tbl_users_length']\n")
     private WebElement NumberOfUserDropdown;
 

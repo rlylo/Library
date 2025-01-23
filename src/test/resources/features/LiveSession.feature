@@ -11,7 +11,7 @@ Feature: User module
     When the user gets "INACTIVE" user count
     And the "INACTIVE" user count should be equal database
 
-   @db
+   @books @db
   Scenario Outline: Librarian should able to get book count based on category
     Given the user logged in as "librarian"
     And the user navigates to "Books" page

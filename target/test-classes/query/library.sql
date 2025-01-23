@@ -37,3 +37,9 @@ SELECT COUNT(*)
 FROM users
 WHERE status = 'INACTIVE'
   AND user_group_id <> 1;
+
+SELECT COUNT(*)
+FROM users;
+
+
+select count(*),bc.name  from book_categories bc join books b on bc.id = b.book_category_id where bc.name = 'Anthology' group by name;
